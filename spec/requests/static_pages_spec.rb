@@ -9,6 +9,11 @@ describe "StaticPages" do
 		  expect(page).to have_content('YoYo Burger')
 		end
 
+		  it "should have the title 'YoYo Burger | Home'" do
+		  visit '/static_pages/home'
+		  expect(page).to have_title("YoYo Burger | Home")
+    end
+
 	end
 
 end
