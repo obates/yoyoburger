@@ -9,41 +9,41 @@
 <body>
 
 
-	<div class="navbar navbar-default topnav">
-		<div class="container">
-			<nav>
-				<ul class="nav pull-left">
-					<li><span class="glyphicon glyphicon-user"></span> <%= link_to "My Account",    '#' %></li>
-					<li><%= link_to "Login/Register/Sign out",    '#' %></li>
-					<li><%= link_to "Loyalty Points:", '#' %></li>
-				</ul>
-			</nav>
+
+	<nav class="navbar navbar-default topnav">
+		<div class="navbar-header">
+			<ul class="nav navbar-nav pull-left">
+				<li><%= link_to "My Account",    '#' %></li>
+				<li><%= link_to "Login/Register/Sign out",    '#' %></li>
+				<li><%= link_to "Loyalty Points:", '#' %></li>
+			</ul>
 		</div>
-	</div>
+	</nav>
+
 
 	<%= link_to image_tag("yoyologo.jpeg",class:"brand", alt: "Rails"), '' %>   
-	<%= link_to image_tag("yoyologo.jpeg",class:"brand", alt: "Rails"), '' %>   
 
 
 
-	<div class="navbar navbar-default">
-		<div class="navbar-inner">
-			<ul class="nav">
-				<li><span class="glyphicon glyphicon-search"></span><%= link_to "Home",'#' %></li>
+	<nav class="navbar navbar-default">
+		<div class="navbar-header">
+			<ul class="nav navbar-nav pull-left">
+				<li><%= link_to "Home",'#' %></li>
 				<li><%= link_to "Menu",    '#' %></li>
 				<li><%= link_to "About",    '#' %></li>
 				<li><%= link_to "Contact",    '#' %></li>
 			</ul>
 
-			<form class="navbar-form navbar-right pull-right" role="search">
+			<form class="navbar-form pull-right" role="search">
 				<div class="form-group">
 					<input type="text" class="form-control" placeholder="Search">
-					<button type="submit" class="btn btn-default">Submit</button>
 				</div>
+				<button type="submit" class="btn btn-default">Submit</button>
 			</form>
 
+
 		</div>
-	</div>
+	</nav>
 
 </header>
 <div class="container">
