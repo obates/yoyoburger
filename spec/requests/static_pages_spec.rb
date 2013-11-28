@@ -1,19 +1,27 @@
 require 'spec_helper'
 
-describe "StaticPages" do
-  
+describe "Static pages" do
+	subject{page}
+
 	describe "Home page" do
+		before {visit root_path}
 
-		it "should have the content 'YoYo Burger'" do
-		  visit '/static_pages/home'
-		  expect(page).to have_content('YoYo Burger')
-		end
+		it {should have_content('YoYo Burger')}
+		it {should have_title('YoYo Burger | Home')}
+	end
 
-		  it "should have the title 'YoYo Burger | Home'" do
-		  visit '/static_pages/home'
-		  expect(page).to have_title("YoYo Burger | Home")
-    end
+	describe "About page" do
+		before {visit about_path}
 
+		it {should have_content('About')}
+		it {should have_title('YoYo Burger | About')}
+	end
+
+	describe "Contact page" do
+		before {visit contact_path}
+
+		it {should have_content('Contact')}
+		it {should have_title('YoYo Burger | Contact')}
 	end
 
 end
