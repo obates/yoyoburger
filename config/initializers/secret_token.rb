@@ -9,4 +9,21 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Yoyoburger::Application.config.secret_key_base = 'd22c3476efe5efff651ae1e0bf0ece96e6b8d93d57565b1a31a5d8c00578938815126fccaa2b97b50fde4e5017c1db84fed970dd7edea753fc16552a2c07ceab'
+
+
+require 'securerandom'
+
+def secure_token
+  token_file = Rails.root.join('.secret')
+  if File.exist?(token_file)
+    # Use the existing token.
+    File.read(token_file).chomp
+  else
+    # Generate a new token and store it in token_file.
+    token = SecureRandom.hex(64)
+    File.write(token_file, token)
+    token
+  end
+end
+
+Yoyoburger::Application.config.secret_key_base = secure_token
