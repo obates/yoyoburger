@@ -1,37 +1,66 @@
-<header class="">
+<header class="header">
 	<nav class="navbar navbar-default topnav">
 		<div class="navbar-header">
 			<ul class="nav navbar-nav pull-left">
-				<li><%= link_to "My Account",    '#' %></li>
-				<li><%= link_to "Login/Register/Sign out",    '#' %></li>
-				<li><%= link_to "Loyalty Points:", '#' %></li>
+				<li><%= link_to '<span class="glyphicon glyphicon-cog">
+					</span> My Account'.html_safe,    '#' %></li>
+				<li><%= link_to '<span class="glyphicon glyphicon-user">
+					</span> Login/Register/Sign out'.html_safe,    '#' %></li>
+				<li><%= link_to '<span class="glyphicon glyphicon-tower">
+					</span> Loyalty Points'.html_safe, '#' %></li>
 			</ul>
 		</div>
 	</nav>
+	<div class="container">
+	<div class="row">
+		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 inner">
+		<%= link_to image_tag("yoyologo.jpeg",class:"brand", alt: "Rails"), '' %>  
+		</div>
+		<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 inner pull-right">
+			
+			<div class="basket social-roll pull-left col-md-4"></div>
+			<h4>Shopping Cart</h4>
+	
+	
+	
+	</div>
+	</div>
 
+	
+	
 
-	<%= link_to image_tag("yoyologo.jpeg",class:"brand", alt: "Rails"), '' %>   
-
-
-
-	<nav class="navbar navbar-default">
+	<nav class="navbar navbar-default bottombar">
 		<div class="navbar-header">
-			<ul class="nav navbar-nav pull-left">
-				<li><%= link_to "Home",'root_path' %></li>
-				<li><%= link_to "Menu",    '#' %></li>
-				<li><%= link_to "About",    'about_path' %></li>
-				<li><%= link_to "Contact",    'contact_path' %></li>
-			</ul>
+			<ul class="nav navbar-nav pull-left whitelinks">
 
+				<li class="home"><%= link_to '<span class="glyphicon glyphicon-home">
+					</span> HOME'.html_safe,'root_path' %>
+
+				</li>
+				<li class="dropdown">
+
+					<%= link_to 'MENU <span class ="caret"></span>'.html_safe, '#', {:class=>"dropdown-toggle"} %>
+
+					
+				</li>
+
+				<li><%= link_to "ABOUT",    'about_path' %></li>
+				<li><%= link_to "CONTACT",    'contact_path' %></li>
+			</ul>
+			</div>
 			<form class="navbar-form pull-right" role="search">
 				<div class="form-group">
 					<input type="text" class="form-control" placeholder="Search">
+					<span class="glyphicon glyphicon-search">
+					</span>
 				</div>
-				<button type="submit" class="btn btn-default">Submit</button>
-			</form>
+				
+					
+
+				</form>
 
 
-		</div>
-	</nav>
+			
+		</nav>
 
-</header>
+	</header>
