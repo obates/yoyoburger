@@ -185,6 +185,42 @@ ul.nav.navbar-nav.pull-left.whitelinks li a:link,ul.nav.navbar-nav.pull-left.whi
   -o-transform:rotate(360deg);
   -ms-transform:rotate(360deg);
   transform:rotate(360deg);
+
+}
+.container {
+max-width: 1170px;
+margin-right: auto;
+margin-left: auto;
+padding-left: 10px;
+padding-right: 10px;
+display:table;
+}
+.row{
+  content: " ";
+display: table;
+margin-left: -10px;
+margin-right: -10p
+}
+.navbar{
+  margin-bottom:0px !important;
+}
+
+.inner {
+display: table-cell;
+
+vertical-align: bottom;
+}
+.header-wrap > div {
+height: 115px;
+}
+/* miscellaneous */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
 }
 .container {
 max-width: 1170px;
