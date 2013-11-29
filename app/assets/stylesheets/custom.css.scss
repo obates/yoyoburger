@@ -1,6 +1,16 @@
 
 /* typography */
-
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: 'Roboto';
+  font-url:('RobotoSlab-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
 }
@@ -78,15 +88,138 @@ footer a:hover {
 footer small {
   float: left;
 }
+.header{
+  background-color:#F6EEE3;
+}
 
 footer ul {
-  float: right;
+  padding:0;
+  float: left;
   list-style: none;
 }
 
 footer ul li {
   float: left;
-  margin-left: 10px;
+  margin-left: 0px;
+}
+
+.home{
+  color:#FFFFFF !important;
+  &:rollover{
+    background-color:#FFF;
+  }
+  &:hover{
+    background-color: #c83a3a;
+
+    -webkit-transition: all 0.9s ease 0s;
+    transition: all 0.9s ease 0s;
+
+  }
+}
+
+ul.nav.navbar-nav.pull-left.whitelinks li a:link,ul.nav.navbar-nav.pull-left.whitelinks li a:visited{
+  color:#FFF !important;
+  font-family: "Roboto";
+  
+}
+.bottombar{
+  background-color:#B39770;
+
+}
+.container2{
+  display:table;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.footer-heading{
+  color: #3b3b3b;
+  font-size: 16px;
+  padding: 0;
+  background: none;
+  border-bottom: none;
+}
+#powered{
+  clear: both;
+  background: #292929;
+  padding: 35px 0;
+  color: #FFFFFF;
+}
+.contact-us{
+  display: block;
+  float: left;
+  font-size: 12px;
+  margin-bottom: 17px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 25%;
+}
+
+
+.social-roll {
+  background-image: url('Basket.png');
+  height: 48px;
+  width: 48px;
+ 
+  float: left;
+  border-radius: 50%;
+  -webkit-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  -ms-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+.basket{
+  background-image: url('Basket.png');
+  vertical-align: middle;
+  display: table-cell;
+ 
+}
+.social-roll:hover {
+  background-image: url('Basket.png');
+  -webkit-transform:rotate(360deg);
+  -moz-transform:rotate(360deg);
+  -o-transform:rotate(360deg);
+  -ms-transform:rotate(360deg);
+  transform:rotate(360deg);
+}
+.container {
+max-width: 1170px;
+margin-right: auto;
+margin-left: auto;
+padding-left: 10px;
+padding-right: 10px;
+display:table;
+}
+.row{
+  content: " ";
+display: table;
+margin-left: -10px;
+margin-right: -10p
+}
+.navbar{
+  margin-bottom:0px !important;
+}
+
+.inner {
+display: table-cell;
+
+vertical-align: bottom;
+}
+.header-wrap > div {
+height: 115px;
+}
+/* miscellaneous */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
 }
 
  /*George Nash, start */
