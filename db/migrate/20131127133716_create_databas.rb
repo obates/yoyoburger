@@ -34,6 +34,24 @@ class CreateDatabas < ActiveRecord::Migration
     	t.integer    :menu_item_id  ,:null => false 
     	t.integer    :order_history_id ,:null => false 
     end
-
-  end
+    create_table :Ingredients do |t|
+        t.string :sourced_from
+        t.integer :stock_amount ,null: false
+        t.float :cost
+        t.float :calories
+        t.string :name ,null: false
+        t.float :price
+    end 
+  create_table :Item_Ingredients do |t|
+    t.integer :Ingredients_id 
+    t.integer :Menu_Item_id
+  end 
+  create_table :Reviews do |t|
+    t.belongs_to :Menu_Item
+    t.string :name
+    t.timestamp :timestamp
+    t.string :content
+    t.integer :number_of_stars
+  end 
+end 
 end
