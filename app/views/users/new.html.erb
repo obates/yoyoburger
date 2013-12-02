@@ -1,59 +1,103 @@
 <% provide(:title, 'Sign up') %>
 <h1>Sign up</h1>
-<%= render 'shared/error_messages' %>
 <div class="row">
 	<div class="col-md-6">
-		<%= form_for(@user , :html=>{:class=>"form-horizontal"} ) do |f|%>
+		<%= form_for(@user , :html=>{:class=>"form-horizontal"} ) do |userForm|%>
+			<%= render 'shared/error_messages', object:userForm.object %>
+			<div class="form-group">
+				<%= userForm.label :first_name,:class=>"col-sm-4 control-label"%>
+				<div class="col-sm-4">
+					<%= userForm.text_field :first_name, :class=>"form-control",:placeholder=>"First"  %>
+				</div>
+			</div>
 
-		<div class="form-group">
-			<%= f.label :first_name,:class=>"col-sm-4 control-label"%>
-			<div class="col-sm-4">
-				<%= f.text_field :first_name, :class=>"form-control",:placeholder=>"First"  %>
+			<div class="form-group">
+				<%= userForm.label :last_name,:class=>"col-sm-4 control-label"  %>
+				<div class="col-sm-4">
+					<%= userForm.text_field :last_name, :class=>"form-control",:placeholder=>"Last" %>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<%= userForm.label :email,:class=>"col-sm-4 control-label"  %>
+				<div class="col-sm-6">
+					<%= userForm.text_field :email, :class=>"form-control",:placeholder=>"Email" %>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<%= userForm.label :phone_number,:class=>"col-sm-4 control-label"  %>
+				<div class="col-sm-4">
+					<%= userForm.text_field :phone_no, :class=>"form-control",:placeholder=>"Phone"%>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<%= userForm.label :password,:class=>"col-sm-4 control-label"  %>
+				<div class="col-sm-6">
+					<%= userForm.password_field :password, :class=>"form-control" ,:placeholder=>"Password"%>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<%= userForm.label :password_confirmation, "Password Confirmation",:class=>"col-sm-4 control-label" %>
+				<div class="col-sm-6">
+					<%= userForm.password_field :password_confirmation , :class=>"form-control",:placeholder=>"Password confirmation"%>
+				</div>
 			</div>
 		</div>
 
-		<div class="form-group">
-			<%= f.label :last_name,:class=>"col-sm-4 control-label"  %>
-			<div class="col-sm-4">
-				<%= f.text_field :last_name, :class=>"form-control",:placeholder=>"Last" %>
-			</div>
+		<div class="col-md-6 form-horizontal">
+
+			<%= userForm.fields_for :addresses do |addressForm| %>
+
+				<div class="form-group">
+					<%= addressForm.label "House name/no",:class=>"col-sm-4 control-label"%>
+
+					<div class="col-sm-4">
+						<%= addressForm.text_field :house_name, :class=>"form-control",:placeholder=>"House name/number"  %>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<%= addressForm.label "Street",:class=>"col-sm-4 control-label"%>
+
+					<div class="col-sm-4">
+						<%= addressForm.text_field :first_line, :class=>"form-control",:placeholder=>"Street"  %>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<%= addressForm.label "City",:class=>"col-sm-4 control-label"%>
+
+					<div class="col-sm-4">
+						<%= addressForm.text_field :city, :class=>"form-control",:placeholder=>"City"  %>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<%= addressForm.label "County",:class=>"col-sm-4 control-label"%>
+
+					<div class="col-sm-4">
+						<%= addressForm.text_field :area, :class=>"form-control",:placeholder=>"County"  %>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<%= addressForm.label "Postcode",:class=>"col-sm-4 control-label"%>
+
+					<div class="col-sm-4">
+						<%= addressForm.text_field :postcode, :class=>"form-control",:placeholder=>"Postcode"  %>
+					</div>
+				</div>
+
+			<% end %>
 		</div>
 
-		<div class="form-group">
-			<%= f.label :email,:class=>"col-sm-4 control-label"  %>
-			<div class="col-sm-6">
-				<%= f.text_field :email, :class=>"form-control",:placeholder=>"Email" %>
-			</div>
-		</div>
 
-		<div class="form-group">
-			<%= f.label :phone_number,:class=>"col-sm-4 control-label"  %>
-			<div class="col-sm-4">
-				<%= f.text_field :phone_no, :class=>"form-control",:placeholder=>"Phone"%>
-			</div>
-		</div>
-
-		<div class="form-group">
-			<%= f.label :password,:class=>"col-sm-4 control-label"  %>
-			<div class="col-sm-6">
-				<%= f.password_field :password, :class=>"form-control" ,:placeholder=>"Password"%>
-			</div>
-		</div>
-
-		<div class="form-group">
-			<%= f.label :password_confirmation, "Password Confirmation",:class=>"col-sm-4 control-label" %>
-			<div class="col-sm-6">
-				<%= f.password_field :password_confirmation , :class=>"form-control",:placeholder=>"Password confirmation"%>
-			</div>
-		</div>
-
-		<%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
+		<%= userForm.submit "Create my account", class: "btn btn-large btn-primary" %>
 		<% end %>
 	</div>
 
-	<div class="col-md-6">
 
-		<h2>Going to be used for the address finder via postcode etc</h2>
-		
-	</div>
 </div>

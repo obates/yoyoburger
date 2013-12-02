@@ -1,5 +1,8 @@
 class User < ActiveRecord::Base
 
+	has_many :addresses,dependent: :destroy
+	accepts_nested_attributes_for :addresses, :allow_destroy => true
+
 	before_save{self.email = email.downcase}
 	before_create :create_remember_token
 
