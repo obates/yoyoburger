@@ -14,7 +14,7 @@
 	<div class="container">
 	<div class="row">
 		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 inner">
-		<%= link_to image_tag("yoyologo.jpeg",class:"brand", alt: "Rails"), '' %>  
+		<%= link_to image_tag("yoyologo.png",class:"brand", alt: "Rails"), '' %>  
 		</div>
 		<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 inner pull-right">
 			
@@ -34,18 +34,18 @@
 			<ul class="nav navbar-nav pull-left whitelinks">
 
 				<li class="home"><%= link_to '<span class="glyphicon glyphicon-home">
-					</span> HOME'.html_safe,'root_path' %>
+					</span> HOME'.html_safe,root_path %>
 
 				</li>
 				<li class="dropdown">
 
-					<%= link_to 'MENU <span class ="caret"></span>'.html_safe, '#', {:class=>"dropdown-toggle"} %>
+					<%= link_to 'MENU <span class ="caret"></span>'.html_safe, menu_path, {:class=>"dropdown-toggle"} %>
 
 					
 				</li>
 
-				<li><%= link_to "ABOUT",    'about_path' %></li>
-				<li><%= link_to "CONTACT",    'contact_path' %></li>
+				<li><%= link_to "ABOUT",   about_path %></li>
+				<li><%= link_to "CONTACT", contact_path %></li>
 			</ul>
 			</div>
 			<form class="navbar-form pull-right" role="search">
