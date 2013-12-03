@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
 
+	before_action :correct_user
+
 	def show
 		@user = User.find(params[:id])
 		@addresses = @user.addresses.all
@@ -33,5 +35,21 @@ class UsersController < ApplicationController
 		params.require(:user).permit(:first_name,:last_name, :email, :password,
 			:password_confirmation,:phone_no,:house_name,:first_line,:area,:city,:postcode,
 			:addresses_attributes => [:user_id,:house_name,:first_line,:area,:city,:postcode])
+	end
+
+	def signed_in_user
+		unless signed_in?
+			store_location
+			redirect_to signin_url, notice: "Please sign in."
+		end
+	end
+
+	def correct_user
+		@user = User.find(params[:id])
+
+		if !(current_user?(@user))
+			flash[:danger] = "Access denied"
+			redirect_back_or signin_url
+		end
 	end
 end

@@ -2,9 +2,8 @@
 
 <h1>New Address</h1>
 
-<%= form_for(@user , :html=>{:class=>"form-horizontal"} ) do |usrForm|%>
+<%= form_for(@addresses,:html=>{:class=>"form-horizontal"}) do |addressForm| %>
 
-		<%= usrForm.fields_for :addresses do |addressForm| %> 
 
 		<div class="form-group">
 			<%= addressForm.label "House name/no",:class=>"col-sm-2 control-label"%>
@@ -46,7 +45,5 @@
 			</div>
 		</div>
 
-	<% end %>
-
-	<%= usrForm.submit "Add address", class: "btn btn-large btn-primary col-sm-offset-3"%>
+	<%= addressForm.submit "Add address", class: "btn btn-large btn-primary col-sm-offset-3"%>
 <% end %>

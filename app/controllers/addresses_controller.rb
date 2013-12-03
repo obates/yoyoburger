@@ -1,16 +1,16 @@
 class AddressesController < ApplicationController
-	#before_action :signed_in_user, only: [:update,:destroy,:edit]
+	before_action :correct_user
 
 	def create
-		# @address = current_user.addresses.build(address_params)
+		@address = current_user.addresses.build(address_params)
 
-		# if @address.save
-		# 	flash[:success] = "Address saved!" #might have to remove this due to conflict with user save
-		# 	redirect_to @user #again might hae to remove this
-		# else
-		# 	flash[:danger] = "Unable to save address"
-		# 	render @user
-		# end
+		if @address.save
+			flash[:success] = "Address saved!"
+			redirect_back_or @user
+		else
+			flash[:danger] = "Unable to save address"
+			render @user
+		end
 	end
 
 	def show
@@ -18,8 +18,7 @@ class AddressesController < ApplicationController
 	end
 
 	def new
-		@user = current_user
-		@user.addresses.build
+		@addresses = current_user.addresses.build
 	end
 
 	def destroy
@@ -45,8 +44,18 @@ class AddressesController < ApplicationController
 	end
 
 	private
-		def address_params
-			params.require(:address).permit(:house_name,:first_line,:area,:city,:postcode)
+
+	def address_params
+		params.require(:address).permit(:house_name,:first_line,:area,:city,:postcode)
+	end
+
+	def correct_user
+		@address = Address.find(params[:id])
+
+		if !(current_user?(@address.user))
+			flash[:danger] = "Access denied, details logged."
+			redirect_back_or signin_url
 		end
+	end
 end
 
