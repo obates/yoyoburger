@@ -1,10 +1,22 @@
 Yoyoburger::Application.routes.draw do
 
+  resources :contact_forms
   resources :users
+  resources :sessions,only:[:new,:create,:destroy]
+  resources :messages,only:[:index, :create]
+
   root 'static_pages#home'
-  match '/signup', to: 'users#new', via:'get'
+  
+  post 'contactform' => 'contactform#create'
+
+  match '/signup',  to: 'users#new',            via: 'get'
+  match '/signin',  to: 'sessions#new',         via: 'get'
+  match '/signout', to: 'sessions#destroy',     via: 'delete'
+
+
   match '/contact', to:'static_pages#contact', via:'get'
   match '/about', to:'static_pages#about',via:'get'
+  match '/menu',to:'static_pages#menu',via:'get'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all yoclearur routes lay out with "rake routes".

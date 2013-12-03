@@ -95,6 +95,7 @@ footer small {
 footer ul {
   padding:0;
   float: left;
+  margin-left:20px;
   list-style: none;
 }
 
@@ -126,17 +127,11 @@ ul.nav.navbar-nav.pull-left.whitelinks li a:link,ul.nav.navbar-nav.pull-left.whi
   background-color:#B39770;
 
 }
-.container2{
-  display:table;
-  padding-left: 0px;
-  padding-right: 0px;
-  margin-left: auto;
-  margin-right: auto;
-}
+
 .footer-heading{
   color: #3b3b3b;
   font-size: 16px;
-  padding: 0;
+  margin-left:20px;
   background: none;
   border-bottom: none;
 }
@@ -161,18 +156,25 @@ ul.nav.navbar-nav.pull-left.whitelinks li a:link,ul.nav.navbar-nav.pull-left.whi
 {
   margin-bottom:5px;
   padding:0px;
-  width:25%;
-  text-align:center;
 }
+
+.field_with_errors {
+  @extend .control-group;
+  @extend .error;
+}
+
+
 
 /* OLI END */
 
 #powered{
   clear: both;
   background: #292929;
-  padding: 35px 0;
+  padding: 15px 0;
   color: #FFFFFF;
+  height:50%;
 }
+h1 { text-align: center };
 .contact-us{
   display: block;
   float: left;
@@ -190,7 +192,7 @@ ul.nav.navbar-nav.pull-left.whitelinks li a:link,ul.nav.navbar-nav.pull-left.whi
   background-image: url('Basket.png');
   height: 48px;
   width: 48px;
- 
+
   float: left;
   border-radius: 50%;
   -webkit-transition: all ease 0.3s;
@@ -203,7 +205,7 @@ ul.nav.navbar-nav.pull-left.whitelinks li a:link,ul.nav.navbar-nav.pull-left.whi
   background-image: url('Basket.png');
   vertical-align: middle;
   display: table-cell;
- 
+
 }
 .social-roll:hover {
   background-image: url('Basket.png');
@@ -215,30 +217,24 @@ ul.nav.navbar-nav.pull-left.whitelinks li a:link,ul.nav.navbar-nav.pull-left.whi
 
 }
 .container {
-max-width: 1170px;
-margin-right: auto;
-margin-left: auto;
-padding-left: 10px;
-padding-right: 10px;
-display:table;
-}
-.row{
-  content: " ";
-display: table;
-margin-left: -10px;
-margin-right: -10p
+  max-width: 1170px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  display:table;
 }
 .navbar{
   margin-bottom:0px !important;
 }
 
 .inner {
-display: table-cell;
+  display: table-cell;
 
-vertical-align: bottom;
+  vertical-align: bottom;
 }
 .header-wrap > div {
-height: 115px;
+  height: 115px;
 }
 /* miscellaneous */
 
@@ -250,30 +246,38 @@ height: 115px;
   @include box_sizing;
 }
 .container {
-max-width: 1170px;
-margin-right: auto;
-margin-left: auto;
-padding-left: 10px;
-padding-right: 10px;
-display:table;
+  max-width: 1170px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  display:table;
 }
 .row{
   content: " ";
+  display: table;
+  margin-left: -10px;
+  margin-right: -10p
+  
+.row footer{
+content: " ";
 display: table;
-margin-left: -10px;
-margin-right: -10p
+width:100%;
+
+background-color:rgb(255,104,2);
+
 }
 .navbar{
   margin-bottom:0px !important;
 }
 
 .inner {
-display: table-cell;
+  display: table-cell;
 
-vertical-align: bottom;
+  vertical-align: bottom;
 }
 .header-wrap > div {
-height: 115px;
+  height: 115px;
 }
 /* miscellaneous */
 
@@ -285,7 +289,7 @@ height: 115px;
   @include box_sizing;
 }
 
- /*George Nash, start */
+/*George Nash, start */
 
 .social-slide {
   background-image: url('twitterHover.png');
@@ -303,6 +307,7 @@ height: 115px;
   background-position: 0px -48px;
   box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.8);
 }
+
 
 
 .twitter {
