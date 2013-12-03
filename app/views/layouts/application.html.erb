@@ -9,7 +9,18 @@
 </head>
 <body>
 
+<<<<<<< HEAD
 	<%= render 'layouts/header'%>
+=======
+<%= render 'layouts/header'%>
+
+<div class="container">
+	<%= yield %>
+	<%= render 'layouts/footer'%>
+	<%= debug(params) if Rails.env.development? %>
+</div>
+
+>>>>>>> 95976979683c0e79e1bc7fdf5e5b494a8d234225
 
 	<div class="container">
 		<% flash.each do |key, value| %>

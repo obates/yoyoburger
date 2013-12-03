@@ -45,26 +45,21 @@
 
 
 			</div>
+
 		</div>
-
-
 
 
 		<nav class="navbar navbar-default bottombar">
 			<div class="navbar-header">
 				<ul class="nav navbar-nav pull-left whitelinks">
-
-					<li class="home"><%= link_to '<span class="glyphicon glyphicon-home">
+				<li class="home"><%= link_to '<span class="glyphicon glyphicon-home">
 					</span> HOME'.html_safe,root_path %>
 
 				</li>
 				<li class="dropdown">
 
-					<%= link_to 'MENU <span class ="caret"></span>'.html_safe, '#', {:class=>"dropdown-toggle"} %>
-
-					
+					<%= link_to 'MENU <span class ="caret"></span>'.html_safe, menu_path, {:class=>"dropdown-toggle"} %>
 				</li>
-
 				<li><%= link_to "ABOUT",    about_path %></li>
 				<li><%= link_to "CONTACT",    contact_path %></li>
 			</ul>
