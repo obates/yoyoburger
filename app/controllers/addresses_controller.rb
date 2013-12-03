@@ -1,5 +1,7 @@
 class AddressesController < ApplicationController
 	before_action :correct_user
+	skip_before_action :correct_user, only: [:new, :create]
+
 
 	def create
 		@address = current_user.addresses.build(address_params)
