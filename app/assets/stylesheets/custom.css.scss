@@ -26,7 +26,7 @@ h2 {
   font-size: 1.2em;
   letter-spacing: -1px;
   margin-bottom: 30px;
-  text-align: center;
+  
   font-weight: normal;
   color: #999;
 }
@@ -161,9 +161,14 @@ ul.nav.navbar-nav.pull-left.whitelinks li a:link,ul.nav.navbar-nav.pull-left.whi
 {
   margin-bottom:5px;
   padding:0px;
-  width:25%;
-  text-align:center;
 }
+
+.field_with_errors {
+  @extend .control-group;
+  @extend .error;
+}
+
+
 
 /* OLI END */
 
@@ -190,7 +195,7 @@ ul.nav.navbar-nav.pull-left.whitelinks li a:link,ul.nav.navbar-nav.pull-left.whi
   background-image: url('Basket.png');
   height: 48px;
   width: 48px;
- 
+
   float: left;
   border-radius: 50%;
   -webkit-transition: all ease 0.3s;
@@ -203,7 +208,7 @@ ul.nav.navbar-nav.pull-left.whitelinks li a:link,ul.nav.navbar-nav.pull-left.whi
   background-image: url('Basket.png');
   vertical-align: middle;
   display: table-cell;
- 
+
 }
 .social-roll:hover {
   background-image: url('Basket.png');
@@ -215,30 +220,30 @@ ul.nav.navbar-nav.pull-left.whitelinks li a:link,ul.nav.navbar-nav.pull-left.whi
 
 }
 .container {
-max-width: 1170px;
-margin-right: auto;
-margin-left: auto;
-padding-left: 10px;
-padding-right: 10px;
-display:table;
+  max-width: 1170px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  display:table;
 }
 .row{
   content: " ";
-display: table;
-margin-left: -10px;
-margin-right: -10p
+  display: table;
+  margin-left: -10px;
+  margin-right: -10p
 }
 .navbar{
   margin-bottom:0px !important;
 }
 
 .inner {
-display: table-cell;
+  display: table-cell;
 
-vertical-align: bottom;
+  vertical-align: bottom;
 }
 .header-wrap > div {
-height: 115px;
+  height: 115px;
 }
 /* miscellaneous */
 
@@ -250,30 +255,30 @@ height: 115px;
   @include box_sizing;
 }
 .container {
-max-width: 1170px;
-margin-right: auto;
-margin-left: auto;
-padding-left: 10px;
-padding-right: 10px;
-display:table;
+  max-width: 1170px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  display:table;
 }
 .row{
   content: " ";
-display: table;
-margin-left: -10px;
-margin-right: -10p
+  display: table;
+  margin-left: -10px;
+  margin-right: -10p
 }
 .navbar{
   margin-bottom:0px !important;
 }
 
 .inner {
-display: table-cell;
+  display: table-cell;
 
-vertical-align: bottom;
+  vertical-align: bottom;
 }
 .header-wrap > div {
-height: 115px;
+  height: 115px;
 }
 /* miscellaneous */
 
@@ -285,7 +290,7 @@ height: 115px;
   @include box_sizing;
 }
 
- /*George Nash, start */
+/*George Nash, start */
 
 .social-slide {
   background-image: url('twitterHover.png');
