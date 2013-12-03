@@ -3,11 +3,8 @@ Yoyoburger::Application.routes.draw do
   resources :contact_forms
   resources :users
   resources :sessions,only:[:new,:create,:destroy]
-<<<<<<< HEAD
   resources :messages,only:[:index, :create]
-=======
   resources :addresses,only:[:new,:create,:edit,:update,:destroy]
->>>>>>> b119ee4f0cfba9070c128739cbce5f6c4e2874f9
 
   root 'static_pages#home'
   
