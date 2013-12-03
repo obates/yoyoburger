@@ -13,8 +13,19 @@ class AddressesController < ApplicationController
 		# end
 	end
 
-	def destroy
+	def show
 
+	end
+
+	def new
+		@user = current_user
+		@user.addresses.build
+	end
+
+	def destroy
+		Address.find(params[:id]).destroy
+		flash[:success] = "Address sucesfully deleted"
+		redirect_back_or @user
 	end
 
 	def edit

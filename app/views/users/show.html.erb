@@ -9,5 +9,10 @@
 		<div class="panel-group" id="addressesGroup">
 			<%= render @addresses %>
 		</div>
+
+	<% else %>
+		<h2>Please add an addres!</h2>
 	<% end %>
+
+	<%= link_to "Add Address","../addresses/new",:method=>:get, :class=>"btn btn-sm btn-default" %>
 </div>	
