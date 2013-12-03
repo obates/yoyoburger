@@ -6,6 +6,8 @@ Yoyoburger::Application.configure do
   # since you don't have to restart the web server when you make code changes.
   config.cache_classes = false
 
+  config.perform_delivery = true
+
   # Do not eager load code on boot.
   config.eager_load = false
 
@@ -15,6 +17,8 @@ Yoyoburger::Application.configure do
 
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
+
+  config.action_mailer.perform_deliveries = true
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
@@ -27,17 +31,19 @@ Yoyoburger::Application.configure do
   # number of complex assets.
   config.assets.debug = true
 
-  config.action_mailer.smtp_settings = {
-address: "smtp.gmail.com",
-port: 587,
-domain: ENV["DOMAIN_NAME"],
-authentication: "plain",
-enable_starttls_auto: true,
-user_name: ENV["GMAIL_USERNAME"],
-password: ENV["GMAIL_PASSWORD"]
+
+
+config.action_mailer.delivery_method = :smtp
+config.action_mailer.smtp_settings = {
+  :authentication => :plain,
+  :address => "smtp.mailgun.org",
+  :port => 587,
+  :domain => "sandbox7692.mailgun.org",
+  :user_name => "postmaster@sandbox7692.mailgun.org",
+  :password => "8rf8jkx1sf20"
 }
 
-config.action_mailer.perform_deliveries = true
+
 
 
 end

@@ -1,10 +1,14 @@
 Yoyoburger::Application.routes.draw do
 
+  resources :contact_forms
   resources :users
   resources :sessions,only:[:new,:create,:destroy]
+  resources :messages,only:[:index, :create]
 
   root 'static_pages#home'
   
+  post 'contactform' => 'contactform#create'
+
   match '/signup',  to: 'users#new',            via: 'get'
   match '/signin',  to: 'sessions#new',         via: 'get'
   match '/signout', to: 'sessions#destroy',     via: 'delete'
