@@ -1,12 +1,13 @@
 <% provide(:title,"#{@user.first_name} #{@user.last_name}") %>
 
-<h1>Hi <%= @user.first_name %> <%= @user.last_name %>!</h1>
+<h1>Hi <%= @user.first_name %>!</h1>
 
 <div class="">
 	<% if @user.addresses.any? %>
-		<h3>Addresses (<%= @user.addresses.count %>)</h3>
-		<ol class="addresses">
+		<h2>Addresses (<%= @user.addresses.count %>)</h2>
+
+		<div class="panel-group" id="addressesGroup">
 			<%= render @addresses %>
-		</ol>
+		</div>
 	<% end %>
 </div>	

@@ -7,11 +7,16 @@ class UsersController < ApplicationController
 
 	def new
 		@user = User.new
-		@user.addresses = Address.new
+		@user.addresses.build
+	end
+
+	def edit
+
 	end
 
 	def create
 		@user = User.new(user_params)
+
 		if @user.save
 			sign_in @user
 			flash[:success] = "Welcome to YoYo Burger!"
@@ -27,6 +32,6 @@ class UsersController < ApplicationController
 	def user_params
 		params.require(:user).permit(:first_name,:last_name, :email, :password,
 			:password_confirmation,:phone_no,:house_name,:first_line,:area,:city,:postcode,
-			address_attributes:[:id,:house_name,:first_line,:area,:city,:postcode])
+			:addresses_attributes => [:user_id,:house_name,:first_line,:area,:city,:postcode])
 	end
 end

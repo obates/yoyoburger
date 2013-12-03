@@ -1,5 +1,5 @@
 class AddressesController < ApplicationController
-	before_action :signed_in_user, only: [:update,:destroy,:edit]
+	#before_action :signed_in_user, only: [:update,:destroy,:edit]
 
 	def create
 		# @address = current_user.addresses.build(address_params)
@@ -18,10 +18,18 @@ class AddressesController < ApplicationController
 	end
 
 	def edit
-
+		@address = Address.find(params[:id])
 	end
 
 	def update
+		@address = Address.find(params[:id])
+
+		if @address.update_attributes(address_params)
+			flash[:success] = "Address Updated"
+			redirect_back_or @user
+		else
+			render 'edit'
+		end
 
 	end
 
