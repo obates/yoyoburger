@@ -8,7 +8,7 @@ class AddressesController < ApplicationController
 
 		if @address.save
 			flash[:success] = "Address saved!"
-			redirect_back_or @user
+			redirect_back_or @address.user
 		else
 			flash[:danger] = "Unable to save address"
 			render @user
@@ -38,7 +38,7 @@ class AddressesController < ApplicationController
 
 		if @address.update_attributes(address_params)
 			flash[:success] = "Address Updated"
-			redirect_back_or @user
+			redirect_back_or @address.user
 		else
 			render 'edit'
 		end
@@ -52,12 +52,22 @@ class AddressesController < ApplicationController
 	end
 
 	def correct_user
-		@address = Address.find(params[:id])
 
-		if !(current_user?(@address.user))
-			flash[:danger] = "Access denied, details logged."
-			redirect_back_or signin_url
+			@address = Address.find_by_id(params[:id])
+
+			if @address
+				if !(current_user?(@address.user))
+					flash[:danger] = "Access denied, details logged."
+					redirect_back_or signin_url
+				end
+			else
+				flash[:danger] = "Address doesn't exist"
+				redirect_back_or root_url
+
 		end
+
+
+
 	end
 end
 
