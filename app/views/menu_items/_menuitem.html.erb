@@ -1,0 +1,18 @@
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h5><a data-toggle="collapse" data-parent="#menuitemGroup" href="#collapse<%="#{menuitem.id}"%>"><%= "#{menuitem.name}" %></a></h5>
+	</div>
+	<div id="collapse<%="#{menuitem.id}"%>" class="panel-collapse collapse">
+		<div class="panel-body col-md-6 col-md-offset-0">
+
+			<p><%=menuitem.name%></p>
+			<p><%=menuitem.description%></p>
+			<p><%=menuitem.spicelevel%></p>
+			<p><%=menuitem.category%></p>
+
+			<% store_location %>
+			<a href="../addresses/<%= address.id %>/edit" class="btn btn-sm btn-default" role="button">Edit</a>
+			<%= link_to "Delete",address,method: :delete,data: {confirm: "Sure?"}, :class=>"btn btn-sm btn-danger" %>
+		</div>
+	</div>
+</div>

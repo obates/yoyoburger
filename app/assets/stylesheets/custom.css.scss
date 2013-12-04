@@ -164,6 +164,25 @@ ul.nav.navbar-nav.pull-left.whitelinks li a:link,ul.nav.navbar-nav.pull-left.whi
 }
 
 
+.currencysymbol
+{
+  text-align: right;
+  padding-top:4px;
+  font-size:1.2em;
+}
+
+.currencyinput
+{
+  margin-left:0px;
+  padding-left:0px;
+  input
+  {
+    padding-left:4px;
+  }
+}
+
+
+
 
 /* OLI END */
 
@@ -261,10 +280,10 @@ h1 { text-align: center };
 }
 
 .row footer{
-display: table;
-width:100%;
+  display: table;
+  width:100%;
 
-background-color:rgb(255,104,2);
+  background-color:rgb(255,104,2);
 
 }
 .navbar{
