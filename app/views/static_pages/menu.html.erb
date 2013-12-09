@@ -1,0 +1,12 @@
+<% provide(:title,'Menu') %>
+
+<% if @menu_items.any? %>
+	
+	<h1> Menu </h1>
+
+	<div class="row menuItems">
+		<%= render partial: "single_menu_item", collection: @menu_items, as: :menu_item %>
+	</div>
+
+
+<% end %>
