@@ -46,11 +46,16 @@ class UsersController < ApplicationController
 	end
 
 	def correct_user
-		@user = User.find(params[:id])
+		@user = User.find_by_id(params[:id])
 
-		if !(current_user?(@user))
-			flash[:danger] = "Access denied"
-			redirect_back_or signin_url
+		if @user
+			if !(current_user?(@user))
+				flash[:danger] = "Access denied"
+				redirect_back_or signin_url
+			end
+		else
+			flash[:danger] = "User doesn't exist"
+			redirect_back_or root_url
 		end
 	end
 end
