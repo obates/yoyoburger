@@ -1,0 +1,57 @@
+<% provide(:title, 'Edit Menu Item') %>
+<h1>Edit Menu Item</h1>
+
+<%= form_for(@menu_items, :html=>{:class=>"form-horizontal"} ) do |menuForm|%>
+
+<%= render 'shared/error_messages', object:menuForm.object %>
+
+
+<div class="form-group">
+	<%= menuForm.label :name, :class=>"col-sm-4 control-label"%>
+	<div class="col-sm-4">
+		<%= menuForm.text_field :name, :class=>"form-control",:placeholder=>"Item name"  %>
+	</div>
+
+</div>
+
+<div class="form-group">
+	<%= menuForm.label :description, :class=>"col-sm-4 control-label"%>
+	<div class="col-sm-4">
+		<%= menuForm.text_area :description, :class=>"form-control",:placeholder=>"Description"  %>
+	</div>
+</div>
+
+<div class="form-group">
+	<%= menuForm.label :spice, :class=>"col-sm-4 control-label"%>
+	<div class="col-sm-4">
+		<%= menuForm.select :spice_level, options_for_select([['1',1],['2',2],['3',3]]),:class=>"form-control",:placeholder=>"Description" %>
+	</div>
+</div>
+
+<div class="form-group">
+	<%= menuForm.label :category, :class=>"col-sm-4 control-label"%>
+	<div class="col-sm-4">
+		<%= menuForm.select :category, options_for_select([['Specials',1],['Burgers',2],['Wraps',3],['Sides',4],['Drinks',5],['Deserts',6]]),:class=>"form-control",:placeholder=>"Description" %>
+	</div>
+</div>
+
+<div class="form-group">
+	<%= menuForm.label :price, :class=>"col-sm-4 control-label"%>
+	<div class="col-sm-4">
+		<div class="col-sm-1 currencysymbol">
+			£
+		</div>
+		<div class="col-sm-3 currencyinput">
+			<%= menuForm.text_field :price, :class=>"form-control",:placeholder=>"0.00"  %>
+		</div>
+	</div>
+
+</div>
+
+<div class="form-group">
+	<%= menuForm.submit "Save changes", class: "btn btn-large btn-primary col-sm-offset-4" %>
+</div>
+
+
+
+<% end %>
