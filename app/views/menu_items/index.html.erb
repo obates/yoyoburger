@@ -1,0 +1,20 @@
+<% provide(:title,'Menu Items') %>
+
+<h1>Menu Items</h1>
+
+<% if @menu_items.any? %>
+
+<div class="panel-group" id="menuGroup">
+
+	<div class="panel panel-default">
+
+		<% @menu_items.each do |menuItem| %>
+			<%= render @menu_items %>
+		<% end %>
+	</div>
+
+
+</div>
+
+<%end%>
+
