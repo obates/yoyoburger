@@ -14,7 +14,10 @@
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
 }
-
+.container{
+  margin:0px;
+  width:100%;
+}
 h1 {
   font-size: 2em;
   letter-spacing: -2px;
@@ -127,7 +130,10 @@ ul.nav.navbar-nav.pull-left.whitelinks li a:link,ul.nav.navbar-nav.pull-left.whi
   background-color:#B39770;
 
 }
-
+.margindown{
+  margin-top:40px;
+  
+}
 .footer-heading{
   color: #3b3b3b;
   font-size: 16px;
@@ -222,7 +228,7 @@ padding-left: 10px;
 padding-right: 10px;
 display:table;
 }
-.row footer{
+footer{
 content: " ";
 display: table;
 width:100%;
