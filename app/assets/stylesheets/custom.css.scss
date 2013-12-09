@@ -29,7 +29,7 @@ h2 {
   font-size: 1.2em;
   letter-spacing: -1px;
   margin-bottom: 30px;
-  text-align: center;
+  
   font-weight: normal;
   color: #999;
 }
@@ -141,6 +141,58 @@ ul.nav.navbar-nav.pull-left.whitelinks li a:link,ul.nav.navbar-nav.pull-left.whi
   background: none;
   border-bottom: none;
 }
+
+/* OLI START */
+
+#error_explanation {
+  color: #f00;
+  font-size:1em;
+
+  ul {
+    list-style: none;
+    margin: 0 0 18px 0;
+  }
+  li
+  {
+    margin-left:0px;
+  }
+}
+
+.alert 
+{
+  margin-bottom:5px;
+  padding:0px;
+}
+
+.field_with_errors {
+  @extend .control-group;
+  @extend .error;
+}
+
+
+.currencysymbol
+{
+  text-align: right;
+  padding-top:4px;
+  font-size:1.2em;
+}
+
+.currencyinput
+{
+  margin-left:0px;
+  padding-left:0px;
+  input
+  {
+    padding-left:4px;
+  }
+}
+
+
+
+
+/* OLI END */
+
+/* laurie start /*
 #powered{
   clear: both;
   background: #292929;
@@ -166,7 +218,7 @@ h1 { text-align: center };
   background-image: url('Basket.png');
   height: 48px;
   width: 48px;
- 
+
   float: left;
   border-radius: 50%;
   -webkit-transition: all ease 0.3s;
@@ -179,7 +231,7 @@ h1 { text-align: center };
   background-image: url('Basket.png');
   vertical-align: middle;
   display: table-cell;
- 
+
 }
 .social-roll:hover {
   background-image: url('Basket.png');
@@ -191,25 +243,24 @@ h1 { text-align: center };
 
 }
 .container {
-max-width: 1170px;
-margin-right: auto;
-margin-left: auto;
-padding-left: 10px;
-padding-right: 10px;
-display:table;
+  max-width: 1170px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  display:table;
 }
-
 .navbar{
   margin-bottom:0px !important;
 }
 
 .inner {
-display: table-cell;
+  display: table-cell;
 
-vertical-align: bottom;
+  vertical-align: bottom;
 }
 .header-wrap > div {
-height: 115px;
+  height: 115px;
 }
 /* miscellaneous */
 
@@ -221,19 +272,32 @@ height: 115px;
   @include box_sizing;
 }
 .container {
-max-width: 1170px;
-margin-right: auto;
-margin-left: auto;
-padding-left: 10px;
-padding-right: 10px;
-display:table;
+  max-width: 1170px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  display:table;
 }
+
 footer{
 content: " ";
 display: table;
 width:100%;
 
-background-color:rgb(255,104,2);
+.row{
+  content: " ";
+  display: table;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.row footer{
+  display: table;
+  width:100%;
+ 
+
+  background-color:rgb(255,104,2);
 
 }
 .navbar{
@@ -241,12 +305,12 @@ background-color:rgb(255,104,2);
 }
 
 .inner {
-display: table-cell;
+  display: table-cell;
 
-vertical-align: bottom;
+  vertical-align: bottom;
 }
 .header-wrap > div {
-height: 115px;
+  height: 115px;
 }
 /* miscellaneous */
 
@@ -258,7 +322,7 @@ height: 115px;
   @include box_sizing;
 }
 
- /*George Nash, start */
+/*George Nash, start */
 
 .social-slide {
   background-image: url('twitterHover.png');
@@ -289,4 +353,3 @@ height: 115px;
 }
 
 /*George Nash, end */
-

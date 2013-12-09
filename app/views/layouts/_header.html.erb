@@ -2,16 +2,38 @@
 	<nav class="navbar navbar-default topnav">
 		<div class="navbar-header">
 			<ul class="nav navbar-nav pull-left">
-				<li><%= link_to '<span class="glyphicon glyphicon-cog">
-					</span> My Account'.html_safe,    '#' %></li>
-				<li><%= link_to '<span class="glyphicon glyphicon-user">
-					</span> Login/Register/Sign out'.html_safe,    '#' %></li>
-				<li><%= link_to '<span class="glyphicon glyphicon-tower">
-					</span> Loyalty Points'.html_safe, '#' %></li>
+
+				<% if signed_in? %>
+
+					<p class="navbar-text">Hi <%= current_user.first_name %>!</p>
+
+					<li> <%= link_to '<span class="glyphicon glyphicon-cog">
+					</span> My Account'.html_safe,    current_user %></li>
+
+					<li><%= link_to '<span class="glyphicon glyphicon-tower">
+					</span> Loyalty Points: '.html_safe, current_user %></li>
+
+
+					<li><%= link_to '<span class="glyphicon glyphicon-user">
+					</span> Sign Out'.html_safe, signout_path, method:"delete" %></li>
+
+				<%else%>
+
+					<li><%= link_to '<span class="glyphicon glyphicon-cog">
+					</span> My Account'.html_safe,    signin_path %></li>
+
+
+					<li><%= link_to '<span class="glyphicon glyphicon-user">
+					</span> Register'.html_safe,    '#' %></li>
+
+				<%end%>
+
+
 			</ul>
 		</div>
 	</nav>
 	<div class="container">
+<<<<<<< HEAD
 	<div class="row clearfix">
 		<div class="col-md-3 column">
 		<%= link_to image_tag("yoyologo.png",class:"brand", alt: "Rails"), '' %>  
@@ -43,7 +65,27 @@
 	<nav class="navbar navbar-default bottombar">
 		<div class="navbar-header">
 			<ul class="nav navbar-nav pull-left whitelinks">
+=======
+		<div class="row">
+			<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 inner">
+				<%= link_to image_tag("yoyologo.jpeg",class:"brand", alt: "Rails"), '' %>  
+			</div>
+			<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 inner pull-right">
 
+				<div class="basket social-roll pull-left col-md-4"></div>
+				<h4>Shopping Cart</h4>
+
+
+
+			</div>
+
+		</div>
+>>>>>>> b741e57ff7bb51abc317994312487930a4ba3896
+
+
+		<nav class="navbar navbar-default bottombar">
+			<div class="navbar-header">
+				<ul class="nav navbar-nav pull-left whitelinks">
 				<li class="home"><%= link_to '<span class="glyphicon glyphicon-home">
 					</span> HOME'.html_safe,root_path %>
 
@@ -51,14 +93,18 @@
 				<li class="dropdown">
 
 					<%= link_to 'MENU <span class ="caret"></span>'.html_safe, menu_path, {:class=>"dropdown-toggle"} %>
-
-					
 				</li>
-
-				<li><%= link_to "ABOUT",   about_path %></li>
-				<li><%= link_to "CONTACT", contact_path %></li>
+				<li><%= link_to "ABOUT",    about_path %></li>
+				<li><%= link_to "CONTACT",    contact_path %></li>
 			</ul>
+		</div>
+		<form class="navbar-form pull-right" role="search">
+			<div class="form-group">
+				<input type="text" class="form-control" placeholder="Search">
+				<span class="glyphicon glyphicon-search">
+				</span>
 			</div>
+<<<<<<< HEAD
 			<form class="navbar-form pull-right" role="search">
 				<div class="form-group">
 					<input type="text" class="form-control" placeholder="Search">
@@ -66,10 +112,12 @@
 				<span class="glyphicon glyphicon-search form-group">
 					</span>
 					
+=======
+>>>>>>> b741e57ff7bb51abc317994312487930a4ba3896
 
-				</form>
 
 
+<<<<<<< HEAD
 			
 		</nav>
 		</header>
@@ -83,3 +131,12 @@
 		</div>
 	</div>
 	
+=======
+		</form>
+
+
+
+	</nav>
+
+</header>
+>>>>>>> b741e57ff7bb51abc317994312487930a4ba3896

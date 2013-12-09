@@ -7,8 +7,43 @@
 
 	<h2>General Enquiries</h2>
 
+
+	<%=form_for @contact_form do |f|%> 
+
+
+
+	<div class="form-group">
+			<%= f.label "Name",:class=>"col-sm-4 control-label"%>
+			<div class="col-sm-4">
+				<%= f.text_field :name, :class=>"form-control",:placeholder=>"Name"  %>
+			</div>
+		</div>
+
+
+		<div class="form-group">
+			<%= f.label "Email",:class=>"col-sm-4 control-label"%>
+			<div class="col-sm-4">
+				<%= f.text_field :email, :class=>"form-control",:placeholder=>"Email@Exmaple.com"  %>
+			</div>
+		</div>
+
+
+		<div class="form-group">
+			<%= f.label "Message",:class=>"col-sm-4 control-label"%>
+			<div class="col-sm-4">
+				<%= f.text_area :message, :class=>"form-control",:placeholder=>"Message"  %>
+			</div>
+		</div>
+
+
+		<div class="form-group">
+			
+			<%=f.button :send%>
+
+		</div>
+		<%end%>
 	
-	<form role="form">
+<!-- 	<form role="form">
 		<div class="form-group">
 			<label for="exampleInputName">NAME</label>
 			<input type="text" class="form-control" id="exampleInputName4" placeholder="Name">
@@ -28,8 +63,10 @@
 		<button type="submit" class="btn btn-default">Submit</button>
 	</form>
 
-</div>
 
+</div>
+ -->
+</div>
 
 <div class="col-md-5">
 
