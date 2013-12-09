@@ -13,17 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20131204204738) do
 
-  create_table "address", force: true do |t|
-    t.integer  "user_id"
-    t.string   "house_name"
-    t.string   "first_line"
-    t.string   "area"
-    t.string   "city"
-    t.string   "postcode"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "addresses", force: true do |t|
     t.integer  "user_id"
     t.string   "house_name"
