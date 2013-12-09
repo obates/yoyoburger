@@ -5,6 +5,7 @@ Yoyoburger::Application.routes.draw do
   resources :sessions,only:[:new,:create,:destroy]
   resources :messages,only:[:index, :create]
   resources :addresses,only:[:new,:create,:edit,:update,:destroy]
+  resources :menu_items
 
   root 'static_pages#home'
   
