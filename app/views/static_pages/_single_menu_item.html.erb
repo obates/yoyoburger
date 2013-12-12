@@ -1,0 +1,59 @@
+ <script>
+
+ 	jQuery(function ($) {
+ 		$(".infoPopover").popover({
+ 			placement:'top',
+ 			trigger:'hover',
+ 			html:'true'
+ 		})
+ 	});
+
+ </script>
+
+ <div class="col-md-4 menuItem col-sm-6 col-xs-12">
+
+ 	<div class="row width100">
+ 		<div class="col-md-9 col-sm-8 col-xs-7 menuItemTitle">
+ 			<%=menu_item.name%>
+ 		</div>
+
+ 		<div class="col-md-3 col-sm-4 col-xs-5 menuItemPrice">
+ 			£<%= menu_item.price %>
+ 		</div>
+ 	</div>
+
+ 	<% if menu_item.image_url != nil %>
+ 	<div class="row secondRow">
+ 		<div class="col-md-4">
+
+ 			<%= image_tag menu_item.image_url(:thumb).to_s %>
+ 		</div>
+
+ 		<div class="col-md-8 menuItemDescription">
+ 			<%= menu_item.description %>
+ 		</div>
+ 	</div>
+	 <% else %>
+	 	<div class="menuItemDescription">
+	 		<%= menu_item.description %>
+	 	</div>
+ 	<% end %>
+
+
+ 	<div class="row secondRow">
+ 		<div class="col-md-4">
+
+ 			<a href="" class="infoPopover" data-toggle="popover" title="Nutrition Info" data-content="<p  class='nutritionInfo'>Default info <%= menu_item.price%></p>">
+
+ 				<img src="http://05af7502907415c3ef71-0550a1100bd826fa21c6159dc7dd44ff.r39.cf3.rackcdn.com/info_icon.png" />
+ 			</a>
+
+ 		</div>
+
+ 		<div class="col-md-8">
+ 			<% if menu_item.spice_level > 0 %>
+ 			<%= image_tag("chilli.png") %>
+ 			<% end %>
+ 		</div>
+ 	</div>
+ </div>

@@ -3,11 +3,14 @@
 </div>
 <div id="collapse<%="#{menu_item.id}"%>" class="panel-collapse collapse">
 	<div class="panel-body col-md-6 col-md-offset-0">
-
-	<p><%=menu_item.name%></p>
-	<p><%=menu_item.description%></p>
-	<p><%=menu_item.spice_level%></p>
+		<div class="menu_item_image">
+			<%= image_tag menu_item.image_url(:thumb).to_s %>
+		</div>
+		<p><%=menu_item.name%></p>
+		<p><%=menu_item.description%></p>
+		<p><%=menu_item.spice_level%></p>
 		<p><%=menu_item.category%></p>
+		<p><%=menu_item.price%></p>
 
 		<% store_location %>
 		<a href="../menu_items/<%= menu_item.id %>/edit" class="btn btn-sm btn-default" role="button">Edit</a>

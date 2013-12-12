@@ -353,3 +353,87 @@ width:100%;
 }
 
 /*George Nash, end */
+
+
+
+
+/* Menu Items */
+
+
+.menuItems
+{
+  width:100%;
+}
+
+.w100
+  {
+    width:100% !important;
+    padding-top:10px;
+  }
+
+.menuItem
+{
+  .width100
+  {
+    width:100% !important;
+    padding-top:10px;
+  }
+
+  .secondRow
+  {
+    width:100% !important;
+    padding-top:20px;
+  }
+
+  border:1px solid gray;
+  border-radius:10px;
+
+  div
+  {
+    font-size: 1.2em;
+
+    &.menuItemPrice
+    {
+      text-align:right;
+    }
+    &.menuItemTitle
+    {
+      text-align:left;
+    }
+
+    &.menuItemDescription
+    {
+      font-size: 1em;
+    }
+  }
+
+  .nutritionInfo
+  {
+    font-size: 0.5em;
+  }
+}
+
+.categories
+{
+
+  ul
+  {
+  }
+
+  a
+  {
+    text-decoration: none;
+  }
+
+  a:link, a:visited
+  {
+    color:black;
+  }
+
+
+  a:hover
+  {
+    color:red;
+  }
+}
+>>>>>>> show_menu

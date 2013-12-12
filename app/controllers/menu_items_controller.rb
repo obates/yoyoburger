@@ -28,6 +28,7 @@ class MenuItemsController < ApplicationController
 	end
 
 	def create
+
 		@menu_item = MenuItem.new(menu_item_params)
 
 		if @menu_item.save
@@ -40,6 +41,7 @@ class MenuItemsController < ApplicationController
 
 	def index
 		@menu_items = MenuItem.all
+
 	end
 
 	def show
@@ -49,8 +51,6 @@ class MenuItemsController < ApplicationController
 	private
 
 		def menu_item_params
-			params.require(:menu_item).permit(:name,:description,:spice_level,:price,:category)
+			params.require(:menu_item).permit(:name,:description,:spice_level,:price,:category,:image)
 		end
-
-
 end

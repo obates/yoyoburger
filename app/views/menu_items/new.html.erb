@@ -1,7 +1,7 @@
 <% provide(:title, 'New Menu Item') %>
 <h1>New Menu Item</h1>
 
-<%= form_for(@menu_item , :html=>{:class=>"form-horizontal"} ) do |menuForm|%>
+<%= form_for(@menu_item , :html=>{:class=>"form-horizontal",:multipart=>true} ) do |menuForm|%>
 
 <%= render 'shared/error_messages', object:menuForm.object %>
 
@@ -24,7 +24,7 @@
 <div class="form-group">
 	<%= menuForm.label :spice, :class=>"col-sm-4 control-label"%>
 	<div class="col-sm-4">
-		<%= menuForm.select :spice_level, options_for_select([['1',1],['2',2],['3',3]]),:class=>"form-control",:placeholder=>"Description" %>
+		<%= menuForm.select :spice_level, options_for_select([['No',0],['Yes',1]]),:class=>"form-control",:placeholder=>"Description" %>
 	</div>
 </div>
 
@@ -46,6 +46,10 @@
 		</div>
 	</div>
 
+</div>
+
+<div class="form-group">
+	<%= menuForm.file_field :image, class: "col-sm-offset-4 btn btn-file"%>
 </div>
 
 <div class="form-group">
