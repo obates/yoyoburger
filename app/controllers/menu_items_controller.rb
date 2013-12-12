@@ -30,8 +30,6 @@ class MenuItemsController < ApplicationController
 	def create
 
 		@menu_item = MenuItem.new(menu_item_params)
-		@menu_item.price = (params([:priceFloat]) * 100).to_i
-
 
 		if @menu_item.save
 			flash[:success] = "Menu item saved"
@@ -53,6 +51,6 @@ class MenuItemsController < ApplicationController
 	private
 
 		def menu_item_params
-			params.require(:menu_item).permit(:name,:description,:spice_level,:priceFloat,:category,:image)
+			params.require(:menu_item).permit(:name,:description,:spice_level,:price,:category,:image)
 		end
 end
