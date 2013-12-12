@@ -10,6 +10,6 @@ class StaticPagesController < ApplicationController
 	end
 
 	def menu
-		@menu_items = MenuItem.all
+		@menu_items = MenuItem.where(:category => params[:categoryID])
 	end
 end
