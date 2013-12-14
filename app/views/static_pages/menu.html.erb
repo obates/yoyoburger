@@ -1,58 +1,62 @@
 <% provide(:title,'Menu') %>
 
-<% if @menu_items.any? %>
-	
-	<h1> Menu </h1>
 
-	<div class="row w100">
+<h1> Menu </h1>
 
-		<div class="col-md-2 categories">
-			<ul class="list-group ">
-				<li class="list-group-item">
-					<%= link_to(menu_path(@menu,:categoryID => 2)) do %>
-						Burgers <span class="glyphicon glyphicon-chevron-right pull-right"></span>
-					<% end %>
-				</li>
-				<li class="list-group-item">
-					<%= link_to(menu_path(@menu,:categoryID => 3)) do %>
-						Wraps <span class="glyphicon glyphicon-chevron-right pull-right"></span>
-					<% end %>
-				</li>
-				<li class="list-group-item">
-					<%= link_to(menu_path(@menu,:categoryID => 1)) do %>
-						Specials <span class="glyphicon glyphicon-chevron-right pull-right"></span>
-					<% end %>
-				</li>
-				<li class="list-group-item">
-					<%= link_to(menu_path(@menu,:categoryID => 4)) do %>
-						Sides <span class="glyphicon glyphicon-chevron-right pull-right"></span>
-					<% end %>
-				</li>
-				<li class="list-group-item">
-					<%= link_to(menu_path(@menu,:categoryID => 5)) do %>
-						Drinks <span class="glyphicon glyphicon-chevron-right pull-right"></span>
-					<% end %>
-				</li>
-				<li class="list-group-item">
-					<%= link_to(menu_path(@menu,:categoryID => 6)) do %>
-						Deserts <span class="glyphicon glyphicon-chevron-right pull-right"></span>
-					<% end %>
-				</li>
-		</div>
+<div class="row w100">
 
-
-		<div class="col-md-10">
-			<div class="row menuItems">
-
-				<%= render partial: "single_menu_item", collection: @menu_items, as: :menu_item %>
-			</div>
-		</div>
-
-
+	<div class="col-md-2 categories">
+		<ul class="list-group ">
+			<li class="list-group-item">
+				<%= link_to(menu_path(@menu,:categoryID => 2)) do %>
+				Burgers <span class="glyphicon glyphicon-chevron-right pull-right"></span>
+				<% end %>
+			</li>
+			<li class="list-group-item">
+				<%= link_to(menu_path(@menu,:categoryID => 3)) do %>
+				Wraps <span class="glyphicon glyphicon-chevron-right pull-right"></span>
+				<% end %>
+			</li>
+			<li class="list-group-item">
+				<%= link_to(menu_path(@menu,:categoryID => 1)) do %>
+				Specials <span class="glyphicon glyphicon-chevron-right pull-right"></span>
+				<% end %>
+			</li>
+			<li class="list-group-item">
+				<%= link_to(menu_path(@menu,:categoryID => 4)) do %>
+				Sides <span class="glyphicon glyphicon-chevron-right pull-right"></span>
+				<% end %>
+			</li>
+			<li class="list-group-item">
+				<%= link_to(menu_path(@menu,:categoryID => 5)) do %>
+				Drinks <span class="glyphicon glyphicon-chevron-right pull-right"></span>
+				<% end %>
+			</li>
+			<li class="list-group-item">
+				<%= link_to(menu_path(@menu,:categoryID => 6)) do %>
+				Deserts <span class="glyphicon glyphicon-chevron-right pull-right"></span>
+				<% end %>
+			</li>
+		</ul>
 	</div>
 
-<% else %>
+	<% if @menu_items.any? %>
+
+
+	<div class="col-md-10">
+		<div class="row menuItems">
+
+			<%= render partial: "single_menu_item", collection: @menu_items, as: :menu_item %>
+		</div>
+	</div>
+
+	<% else %>
 
 	<h1> No items! </h1>
 
-<% end %>
+	<% end %>
+
+</div>
+</div>
+
+

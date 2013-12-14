@@ -11,9 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
- 
-ActiveRecord::Schema.define(version: 20131210180747) do
+ActiveRecord::Schema.define(version: 20131214161220) do
 
+  create_table "address", force: true do |t|
+    t.integer  "user_id"
+    t.string   "house_name"
+    t.string   "first_line"
+    t.string   "area"
+    t.string   "city"
+    t.string   "postcode"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "addresses", force: true do |t|
     t.integer  "user_id"
@@ -32,7 +41,7 @@ ActiveRecord::Schema.define(version: 20131210180747) do
     t.string   "name"
     t.string   "description"
     t.integer  "spice_level"
-    t.integer  "price"
+    t.float    "price"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "category"
