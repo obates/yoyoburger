@@ -10,11 +10,18 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
+
 .container{
   margin:0px;
   width:100%;
   max-width: 1000px !important;
 }
+
+.row
+{
+  width:100% !important;
+}
+
 h1 {
   font-size: 2em;
   letter-spacing: -2px;
@@ -34,6 +41,14 @@ h2 {
 p {
   font-size: 1.1em;
   line-height: 1.7em;
+}
+
+ch1 {
+    font-size: 2em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+   line-height: 1;
+   text-align: center;
 }
 
 
@@ -451,6 +466,7 @@ h1 { text-align: center };
 
 
 
+
   .twitter {
     background-image: url('twitterHover.png');
   }
@@ -471,6 +487,26 @@ h1 { text-align: center };
 .menuItems
 {
   width:100%;
+
+.social-slide {
+ display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url('twitterHover.png');
+  height: 48px;
+  width: 48px;
+  /*margin: 10px;
+  float: center;*/
+  -webkit-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  -ms-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+.social-slide:hover {
+  background-position: 0px -48px;
+  box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.8);
+
 }
 
 .w100
@@ -544,4 +580,80 @@ h1 { text-align: center };
     color:red;
   }
 }
+
+
+
+.contactBox {
+
+border: 10px solid white;
+box-sizing: border-box;
+padding: 30px 25px;
+background: white url('wave-pattern-gray.png') repeat;
+background-image: url('wave-pattern-gray.png');
+background-position-x: initial;
+background-position-y: initial;
+background-size: initial;
+background-repeat: repeat;
+background-color: white;
+}
+
+
+ch1 { text-align: center };
+.contact-us{
+  display: block;
+  float: left;
+  font-size: 12px;
+  margin-bottom: 17px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 25%;
+}
+
+label {
+font-size: 1.25em;
+color: #4d4d4d;
+cursor: pointer;
+display: block;
+font-weight: 100;
+margin-bottom: 1.125em;
+}
+
+.formButton {
+border: 1px solid #fcbc73;
+font-size: 1.25em;
+padding: 1.25em 1.25em 1.25em 1.25em;
+-webkit-box-shadow: none;
+-moz-box-shadow: none;
+box-shadow: none;
+text-shadow: none;
+text-transform: uppercase;
+color: white;
+border-radius: 10px;
+letter-spacing: 2px;
+display: inline-block;
+-webkit-transition: background-color 300ms ease-out;
+transition: background-color 300ms ease-out;
+border-style: solid;
+border-width: 1px;
+font-family: inherit;
+font-weight: 100;
+line-height: 1;
+margin: 0 0 1.25em;
+text-decoration: none;
+text-align: center;
+background-color: #fcbc73;
+border-color: #fba441;
+box-sizing: border-box;
+font: -webkit-small-control;
+width: 100%
+
+}
+
+.text-center {
+text-align: center !important;
+}
+
+/*George Nash, end */
 
