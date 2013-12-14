@@ -44,11 +44,11 @@ p {
 }
 
 ch1 {
-    font-size: 2em;
+  font-size: 2em;
   letter-spacing: -2px;
   margin-bottom: 30px;
-   line-height: 1;
-   text-align: center;
+  line-height: 1;
+  text-align: center;
 }
 
 
@@ -476,26 +476,22 @@ h1 { text-align: center };
     background-image: url('facebookHover.png');
   }
 
-/*George Nash, end */
+  /*George Nash, end */
 
 
 
 
-/* Menu Items */
+  /* Menu Items */
 
 
-.menuItems
-{
-  width:100%;
-}
 
-.social-slide {
- display: block;
-  margin-left: auto;
-  margin-right: auto;
-  background-image: url('twitterHover.png');
-  height: 48px;
-  width: 48px;
+  .social-slide {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   background-image: url('twitterHover.png');
+   height: 48px;
+   width: 48px;
   /*margin: 10px;
   float: center;*/
   -webkit-transition: all ease 0.3s;
@@ -504,97 +500,124 @@ h1 { text-align: center };
   -ms-transition: all ease 0.3s;
   transition: all ease 0.3s;
 }
+
 .social-slide:hover {
   background-position: 0px -48px;
   box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.8);
 }
 
-.w100
-  {
-    width:100% !important;
-    padding-top:10px;
-  }
-
-.menuItem
+.menu
 {
-  .width100
+
+  .col-md-2
   {
-    width:100% !important;
-    padding-top:10px;
+    padding-left: 0px !important;
   }
 
-  .secondRow
+  .menuItem
   {
-    width:100% !important;
-    padding-top:20px;
+    .width100
+    {
+      width:100% !important;
+      padding-top:10px;
+    }
+
+    .secondRow
+    {
+      width:100% !important;
+      padding-top:20px;
+    }
+
+    border:1px solid gray;
+    border-radius:10px;
+
+    div
+    {
+      font-size: 1.05em;
+
+      &.menuItemPrice
+      {
+        text-align:right;
+      }
+      &.menuItemTitle
+      {
+        text-align:left;
+      }
+
+      &.menuItemDescription
+      {
+        font-size: 1em;
+      }
+    }
+
+    .nutritionInfo
+    {
+      font-size: 0.5em;
+    }
+
+    .infoPopover
+    {
+
+    }
+
+    a.addToBasket
+    {
+      text-align: right;
+
+      &:link,&:visited
+      {
+        color:#6A6A65;
+      }
+
+      &:hover
+      {
+        color:#EE6557;
+      }
+    }
+
   }
 
-  border:1px solid gray;
-  border-radius:10px;
-
-  div
+  .categories
   {
-    font-size: 1.2em;
 
-    &.menuItemPrice
+    ul
     {
-      text-align:right;
-    }
-    &.menuItemTitle
-    {
-      text-align:left;
     }
 
-    &.menuItemDescription
+    a
     {
-      font-size: 1em;
+      text-decoration: none;
     }
-  }
 
-  .nutritionInfo
-  {
-    font-size: 0.5em;
+    a:link, a:visited
+    {
+      color:black;
+    }
+
+
+    a:hover
+    {
+      color:red;
+    }
   }
 }
 
-.categories
-{
 
-  ul
-  {
-  }
-
-  a
-  {
-    text-decoration: none;
-  }
-
-  a:link, a:visited
-  {
-    color:black;
-  }
-
-
-  a:hover
-  {
-    color:red;
-  }
-}
 
 
 
 .contactBox {
 
-border: 10px solid white;
-box-sizing: border-box;
-padding: 30px 25px;
-background: white url('wave-pattern-gray.png') repeat;
-background-image: url('wave-pattern-gray.png');
-background-position-x: initial;
-background-position-y: initial;
-background-size: initial;
-background-repeat: repeat;
-background-color: white;
+  border: 10px solid white;
+  box-sizing: border-box;
+  padding: 30px 25px;
+  background: white url('wave-pattern-gray.png') repeat;
+  background-image: url('wave-pattern-gray.png');
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-repeat: repeat;
+  background-color: white;
 }
 
 .contact-us{
@@ -610,47 +633,47 @@ background-color: white;
 }
 
 label {
-font-size: 1.25em;
-color: #4d4d4d;
-cursor: pointer;
-display: block;
-font-weight: 100;
-margin-bottom: 1.125em;
+  font-size: 1.25em;
+  color: #4d4d4d;
+  cursor: pointer;
+  display: block;
+  font-weight: 100;
+  margin-bottom: 1.125em;
 }
 
 .formButton {
-border: 1px solid #fcbc73;
-font-size: 1.25em;
-padding: 1.25em 1.25em 1.25em 1.25em;
--webkit-box-shadow: none;
--moz-box-shadow: none;
-box-shadow: none;
-text-shadow: none;
-text-transform: uppercase;
-color: white;
-border-radius: 10px;
-letter-spacing: 2px;
-display: inline-block;
--webkit-transition: background-color 300ms ease-out;
-transition: background-color 300ms ease-out;
-border-style: solid;
-border-width: 1px;
-font-family: inherit;
-font-weight: 100;
-line-height: 1;
-margin: 0 0 1.25em;
-text-decoration: none;
-text-align: center;
-background-color: #fcbc73;
-border-color: #fba441;
-box-sizing: border-box;
-font: -webkit-small-control;
-width: 100%
+  border: 1px solid #fcbc73;
+  font-size: 1.25em;
+  padding: 1.25em 1.25em 1.25em 1.25em;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  text-shadow: none;
+  text-transform: uppercase;
+  color: white;
+  border-radius: 10px;
+  letter-spacing: 2px;
+  display: inline-block;
+  -webkit-transition: background-color 300ms ease-out;
+  transition: background-color 300ms ease-out;
+  border-style: solid;
+  border-width: 1px;
+  font-family: inherit;
+  font-weight: 100;
+  line-height: 1;
+  margin: 0 0 1.25em;
+  text-decoration: none;
+  text-align: center;
+  background-color: #fcbc73;
+  border-color: #fba441;
+  box-sizing: border-box;
+  font: -webkit-small-control;
+  width: 100%
 
 }
 
 .text-center {
-text-align: center !important;
+  text-align: center !important;
 }
 
 /*George Nash, end */

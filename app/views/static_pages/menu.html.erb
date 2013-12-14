@@ -3,9 +3,9 @@
 
 <h1> Menu </h1>
 
-<div class="row w100">
+<div class="row menu">
 
-	<div class="col-md-2 categories">
+	<div class="col-md-2 col-sm-2 categories" id="categoryStatic">
 		<ul class="list-group ">
 			<li class="list-group-item">
 				<%= link_to(menu_path(@menu,:categoryID => 2)) do %>
@@ -43,7 +43,7 @@
 	<% if @menu_items.any? %>
 
 
-	<div class="col-md-10">
+	<div class="col-md-8 col-sm-8">
 		<div class="row menuItems">
 
 			<%= render partial: "single_menu_item", collection: @menu_items, as: :menu_item %>
@@ -51,12 +51,16 @@
 	</div>
 
 	<% else %>
-
-	<h1> No items! </h1>
-
+	<div class="col-md-8">
+		<h1> No items! </h1>
+	</div>
 	<% end %>
 
+	<div class="col-md-2">
+		Basket
+	</div>
 </div>
-</div>
+
+
 
 
