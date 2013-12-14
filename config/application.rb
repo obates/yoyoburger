@@ -13,6 +13,7 @@ require "sprockets/railtie"
 
 
 
+
 Bundler.require(:default, Rails.env)
 
 module Yoyoburger

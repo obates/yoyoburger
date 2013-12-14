@@ -5,18 +5,15 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-@font-face {
-  font-family: 'Roboto';
-  font-url:('RobotoSlab-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
+
 }
+
 .container{
   margin:0px;
   width:100%;
+  max-width: 1000px !important;
 }
 h1 {
   font-size: 2em;
@@ -42,19 +39,95 @@ p {
 
 /* header */
 
-.header{
-  background-color:#FFFFFF;
-  background-image:image-url("header_bottom.png");
-  background-repeat: repeat-x;
-  background-position: bottom left;
+.headerStyle{
+  background-color: #F5F5F5;
+  background-image:image-url("page_pattern.png");
+  border-bottom:1px solid #6A6A65;
+  padding-bottom:15px;
+  padding-top:10px;
+  height:100%;
+  font-family: 'ClassicRoundMedium';
+
+
+  a:link,a:visited
+  {
+    color:#6A6A65;
+  }
+
+  a:hover
+  {
+    color:#EE6557 !important;
+  }
+}
+
+.brand
+{
+  padding-top:20px;
+}
+
+.headernav
+{
 
 }
 
+.topnav
+{
+  float:left;
+  width:100%;
+  font-size:0.9em;
+}
+
+.bottomnav
+{
+  float:left;
+  width:100%;
+  font-size:1.3em;
+
+  a:hover
+  {
+   color:#EE6557 !important;
+   border-bottom:1px solid #EE6557;
+
+ }
+
+ .activeLink
+ {
+  color:#EE6557 !important;
+}
+}
+
+.search-inner
+{
+  position:relative;
+
+  input
+  {
+    padding-right:30px;
+  }
+  a:link, a:visited
+  {
+    position:absolute;
+    right:0px;
+    padding:6px 25px;
+  }
+  a:hover
+  {
+    border:none !important;
+    text-decoration: none;
+  }
+}
+
+
+
+
+
 body
 {
+  background-color: #F5F5F5;
   background-image:image-url("page_pattern.png");
   background-position: top left;
   background-repeat: repeat;
+  font-family: 'Open Sans';
 }
 
 
@@ -66,72 +139,122 @@ body
 
 /* footer */
 
-footer {
-  margin-top: 45px;
-  padding-top: 5px;
-  border-top: 1px solid #eaeaea;
-  color: #999;
-}
-
-footer a {
-  color: #555;
-}
-
-footer a:hover {
-  color: #222;
-}
-
-footer small {
-  float: left;
-}
 
 
-footer ul {
-  padding:0;
-  float: left;
-  margin-left:20px;
-  list-style: none;
-}
-
-footer ul li {
-  float: left;
-  margin-left: 0px;
-}
-
-.home{
-  color:#FFFFFF !important;
-  &:rollover{
-    background-color:#FFF;
+.footer
+{
+  border-bottom:1px solid #6A6A65;
+  h3
+  {
+    font-family: 'ClassicRoundMedium';
+    font-size: 1.2em;
+    text-align: center;
   }
-  &:hover{
-    background-color: #c83a3a;
 
-    -webkit-transition: all 0.9s ease 0s;
-    transition: all 0.9s ease 0s;
+  .footerLogo
+  {
+    text-align: left;
+    color:#EE6557;
+    margin-left:25px;
+  }
+
+  .footerInside
+  {
+    border-top:1px solid #6A6A65;
+
+    .social-icons {
+      list-style-type: none!important;
+      padding-top:10px;
+      height:55px;
+      width:100%;
+    }
+    .social-icons li{
+      float: left!important;
+      margin-right: 2px!important;
+      margin-bottom: 2px!important;
+      padding: 0px!important;
+      display: inline!important;
+      width: auto!important;
+      border-radius: 50%;
+
+    }     
+    .social-icons li a {
+      -moz-transition: all 1s ease 0s;
+      display: block!important;
+      float: left!important;
+      height: 100%!important;
+      margin: 0!important;
+      padding: 0!important;
+      width: 40px!important;
+      height: 40px!important;
+      text-indent: -9999px!important;
+    }
+    .social-icons li a:hover {
+      background-position: 0 -40px!important;
+      border-radius: 50%;
+    }
+    .social-icons li a {
+      background-color:transparent;
+    }
+
+    .social-icons li.facebookFooter a {
+      background: image-url("facebook.png") no-repeat 0 0;
+    }
+    .social-icons li.facebookFooter a:hover {
+      background-color: #3b5998;
+    }
+
+    .social-icons li.googleplusFooter a {
+      background: image-url("googleplus.png") no-repeat 0 0;
+    }
+    .social-icons li.googleplusFooter a:hover {
+      background-color: #dd4b39;
+    }
+    .social-icons li.twitterFooter a {
+      background: image-url("twitter.png") no-repeat 0 0;
+    }
+    .social-icons li.twitterFooter a:hover {
+      background-color: #48c4d2;
+    }
+
+    .gmaps
+    {
+      float:left;
+      padding-top:10px;
+      position:relative;
+
+      &:iframe
+      {
+        width:300px;
+        height:300px;
+        margin-top:-40px;
+        margin-left:-10px;
+      }
+      .mapaItem
+      {
+        overflow: hidden;
+        height:150px;
+      }
+
+    }
 
   }
-}
-
-ul.nav.navbar-nav.pull-left.whitelinks li a:link,ul.nav.navbar-nav.pull-left.whitelinks li a:visited{
-  color:#FFF !important;
-  font-family: "Roboto";
-  
-}
-.bottombar{
-  background-color:#B39770;
 
 }
-.margindown{
-  margin-top:40px;
-  
+
+.bottomFooter
+{
+  padding-top:40px;
+
+  p
+  {
+    text-align: center;
+
+  }
+
 }
-.footer-heading{
-  color: #3b3b3b;
-  font-size: 16px;
-  margin-left:20px;
-  background: none;
-  border-bottom: none;
-}
+
+
 
 /* OLI START */
 
@@ -271,11 +394,7 @@ h1 { text-align: center };
   display:table;
 }
 
-.footer{
-content: " ";
-display: table;
-width:100%;
-}
+
 /*.row{
   content: " ";
   display: table;
@@ -288,57 +407,57 @@ width:100%;
   width:100%;
  
 
-}*/
-.navbar{
-  margin-bottom:0px !important;
-}
+  }*/
+  .navbar{
+    margin-bottom:0px !important;
+  }
 
-.inner {
-  display: table-cell;
+  .inner {
+    display: table-cell;
 
-  vertical-align: bottom;
-}
-.header-wrap > div {
-  height: 115px;
-}
-/* miscellaneous */
+    vertical-align: bottom;
+  }
+  .header-wrap > div {
+    height: 115px;
+  }
+  /* miscellaneous */
 
-.debug_dump {
-  clear: both;
-  float: left;
-  width: 100%;
-  margin-top: 45px;
-  @include box_sizing;
-}
+  .debug_dump {
+    clear: both;
+    float: left;
+    width: 100%;
+    margin-top: 45px;
+    @include box_sizing;
+  }
 
-/*George Nash, start */
+  /*George Nash, start */
 
-.social-slide {
-  background-image: url('twitterHover.png');
-  height: 48px;
-  width: 48px;
-  margin: 10px;
-  float: left;
-  -webkit-transition: all ease 0.3s;
-  -moz-transition: all ease 0.3s;
-  -o-transition: all ease 0.3s;
-  -ms-transition: all ease 0.3s;
-  transition: all ease 0.3s;
-}
-.social-slide:hover {
-  background-position: 0px -48px;
-  box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.8);
-}
-
-
-
-.twitter {
-  background-image: url('twitterHover.png');
-}
+  .social-slide {
+    background-image: url('twitterHover.png');
+    height: 48px;
+    width: 48px;
+    margin: 10px;
+    float: left;
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    -o-transition: all ease 0.3s;
+    -ms-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+  }
+  .social-slide:hover {
+    background-position: 0px -48px;
+    box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.8);
+  }
 
 
-.facebook {
-  background-image: url('facebookHover.png');
-}
+
+  .twitter {
+    background-image: url('twitterHover.png');
+  }
+
+
+  .facebook {
+    background-image: url('facebookHover.png');
+  }
 
 /*George Nash, end */
