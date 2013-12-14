@@ -22,3 +22,20 @@
        url('../assets/glyphicons-halflings-regular.ttf') format('truetype'), 
        url('../assets/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
+
+@font-face
+{
+  font: {
+    family:'ClassicRoundMedium';
+    weight:'normal';
+    style:'normal';
+  }
+	font-family: 'ClassicRoundMedium';
+	src: asset-url('ClassicRound-Medium-webfont.eot',font);
+	src: asset-url('ClassicRound-Medium-webfont.eot',font) format('embedded-opentype'),
+       asset-url('ClassicRound-Medium-webfont.woff',font) format('woff'),
+       asset-url('ClassicRound-Medium-webfont.ttf',font) format('truetype'),
+       asset-url('ClassicRound-Medium-webfont.svg',font) format('svg')
+}
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300);
