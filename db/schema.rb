@@ -11,9 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
- 
 ActiveRecord::Schema.define(version: 20131210180747) do
-
 
   create_table "addresses", force: true do |t|
     t.integer  "user_id"
@@ -32,7 +30,7 @@ ActiveRecord::Schema.define(version: 20131210180747) do
     t.string   "name"
     t.string   "description"
     t.integer  "spice_level"
-    t.integer  "price"
+    t.decimal  "price"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "category"
