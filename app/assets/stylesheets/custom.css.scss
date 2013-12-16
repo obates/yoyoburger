@@ -666,3 +666,27 @@ text-align: center !important;
 
 /*George Nash, end */
 
+/*James Baker start*/
+
+.aboutCarousel {
+  max-height: 100px;
+  max-width: 100px;
+}
+
+.specialItem {
+padding-top: 15px;
+
+  .specialItemHeader
+  {
+    font-weight: bold;
+  }
+
+  img 
+  {
+    border-radius: 10px;
+  }
+
+}
+
+
+/*James Baker End*/
