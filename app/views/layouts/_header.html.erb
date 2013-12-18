@@ -32,7 +32,7 @@
 
 
 								<li><%= link_to '<span class="glyphicon glyphicon-user">
-								</span> Register'.html_safe,    '#' %></li>
+								</span> Register'.html_safe,   signup_path %></li>
 
 								<%end%>
 
@@ -50,7 +50,7 @@
 									</span> HOME'.html_safe,root_path,{:class=>"activeLink"} %>
 								</li>
 								<li class="dropdown">
-									<%= link_to 'MENU <span class ="caret"></span>'.html_safe, menu_path, {:class=>"dropdown-toggle"} %>
+									<%= link_to 'MENU <span class ="caret"></span>'.html_safe, "#{menu_path}?categoryID=2", {:class=>"dropdown-toggle"} %>
 								</li>
 								<li><%= link_to "ABOUT",    about_path %></li>
 								<li><%= link_to "CONTACT",    contact_path %></li>
